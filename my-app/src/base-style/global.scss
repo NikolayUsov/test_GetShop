@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a:not([href^="http://"]):not([href^="https://"]) {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+h2 {
+  margin-top: 0;
+  padding: 0;
+}
+
+  
+.baseButton {
+  display: inline-block;
+  padding: 16px 26px;
+  width: 100%;
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: $main-black;
+  border: 1px solid $border-color;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: $main-black;
+    color: $modal-bg-color;
+    border-color: transparent;
+  }
+}
