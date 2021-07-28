@@ -39,10 +39,15 @@ h2 {
   border: 1px solid $border-color;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 
   &:hover {
     background-color: $main-black;
     color: $modal-bg-color;
     border-color: transparent;
+  }
+
+  &:active {
+    opacity: 0.8;
   }
 }

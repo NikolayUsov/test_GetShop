@@ -5,7 +5,7 @@ import styles from './button-number.module.scss';
 
 function ButtonNumber({ value }) {
   return (
-    <button type="button" className={styles.button}>{value}</button>
+    <button type="button" className={styles.button}>{value === 'BackSpace' ? 'Стереть' : value}</button>
   );
 }
 ButtonNumber.propTypes = {

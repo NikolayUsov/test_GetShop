@@ -71,6 +71,20 @@
   background-color: transparent;
 }
 
+.formModal_close {
+  composes: baseButton from '../../index.scss';
+  width: 88px;
+  height: 52px;
+  background-color: $white;
+  position: absolute;
+  right: 21px;
+  top: 19px;
+
+  &:hover {
+    color: $white;
+  }
+}
+
 .formModal_form {
   position: absolute;
   top: 0;
@@ -82,7 +96,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 72px 24px;
+  padding: 72px 47px;
 }
 
 .formModal__header {
@@ -97,6 +111,7 @@
 .formModal__input_wrapper {
   width: 226px;
   height: 38px;
+  margin-bottom: 15px;
 }
 
 .formModal__phone_input {
@@ -126,5 +141,47 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
-  margin: 0 0 15px 0;
+  margin: 0 0 30px 0;
+  text-align: center;
+}
+
+.formModal__keyboard_wrapper {
+  margin-bottom: 37px;
+}
+
+.formModal__confirm_wrapper {
+  padding-left: 11px;
+  margin-bottom: 18px;
+}
+
+.formModal__confirm_checkbox {
+  composes: visually-hidden from '../../index.scss';
+}
+
+.formModal__confirm_checkbox:checked + .formModal__confirm_label {
+  &::before{
+    background: url('./../../assets/pictures/check.svg') center no-repeat;
+  }
+}
+.formModal__confirm_label {
+  font-size: 14px;
+  line-height: 16px;
+  padding: 5px 60px;
+  display: flex;
+  align-items: center;
+  color: $secondary-text-color;
+  display: inline-block;
+  position: relative;
+
+  &::before {
+    @include pseudo(40px, 40px);
+    border: 2px solid $main-black;
+    top: 0;
+    left: 0;
+  }
+}
+
+.formModal__button_submit {
+  composes: baseButton from '../../index.scss';
+ 
 }
