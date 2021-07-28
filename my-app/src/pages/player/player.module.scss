@@ -60,3 +60,50 @@
   flex-grow: 1;
   flex-basis: 100%;
 }
+
+
+.formModal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.formModal_form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 380px;
+  height: 100%;
+  background-color: $modal-bg-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px 24px;
+}
+
+.formModal__header {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.formModal__phone_input {
+  font-weight: bold;
+  font-family: $main-font;
+  font-size: 32px;
+  line-height: 37px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  border: none;
+  background-color: transparent;
+  width: 226px;
+  height: 38px;
+
+}

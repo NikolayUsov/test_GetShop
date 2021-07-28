@@ -18,6 +18,19 @@ export default function Player() {
         </div>
         
       </div>
+      <section className={styles.formModal}>
+
+        <form action="#" method="post" className={styles.formModal_form}>
+          <h2 className={styles.formModal__header}>Введите ваш номер мобильного телефона</h2>
+
+          <input
+            type="tel"
+            placeholder='+7(___)___-__-__'
+            className={styles.formModal__phone_input}
+          />
+        </form>
+
+      </section>
     </div>
   )
 }
