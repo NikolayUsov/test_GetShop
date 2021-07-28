@@ -1,4 +1,5 @@
 import React from 'react'
+import KeyBoard from '../../components/key-board/key-board';
 import styles from './player.module.scss';
 
 export default function Player() {
@@ -22,12 +23,21 @@ export default function Player() {
 
         <form action="#" method="post" className={styles.formModal_form}>
           <h2 className={styles.formModal__header}>Введите ваш номер мобильного телефона</h2>
-
-          <input
-            type="tel"
-            placeholder='+7(___)___-__-__'
-            className={styles.formModal__phone_input}
-          />
+          <div className={styles.formModal__input_wrapper}>
+            <label htmlFor="phone" className="visually-hidden">
+              Phone number
+            </label>
+            <input
+              id="phone"
+              type="tel"
+              placeholder='+7(___)___-__-__'
+              className={styles.formModal__phone_input}
+            />
+          </div>
+          <p className={styles.formModal__description}>
+          и с Вами свяжется наш менеждер для дальнейшей консультации
+          </p>
+          <KeyBoard />
         </form>
 
       </section>

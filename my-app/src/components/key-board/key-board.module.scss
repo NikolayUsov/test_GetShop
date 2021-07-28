@@ -1,0 +1,24 @@
+@import './../../index.scss';
+ul {
+    @include reset-list;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 88px);
+    grid-template-rows: repeat(3, 52px);
+    gap: 10px;
+}
+
+.backspace {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.zero {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
