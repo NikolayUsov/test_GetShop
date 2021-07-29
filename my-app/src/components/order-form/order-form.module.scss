@@ -1,0 +1,113 @@
+@import './../../index.scss';
+
+.form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 380px;
+    height: 100%;
+    background-color: $modal-bg-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 72px 47px;
+  }
+  
+  .header {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 13px;
+  }
+  
+  .input_wrapper {
+    width: 270px;
+    height: 38px;
+    margin-bottom: 15px;
+  }
+  
+  .phone_input {
+    font-weight: bold;
+    font-family: $main-font;
+    font-size: 32px;
+    line-height: 37px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+      &::placeholder{
+        font-weight: bold;
+        font-family: $main-font;
+        color: $main-black;
+        font-size: 32px;
+        line-height: 37px;
+        opacity: 1;
+      }
+      &:focus{
+        outline: none;
+      }
+  }
+  
+  .description {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0 0 30px 0;
+    text-align: center;
+  }
+  
+  .keyboard_wrapper {
+    margin-bottom: 37px;
+  }
+  
+  .confirm_wrapper {
+    padding-left: 11px;
+    margin-bottom: 18px;
+  }
+  
+  .confirm_checkbox {
+    composes: visually-hidden from '../../index.scss';
+  }
+  
+  .confirm_checkbox:checked + .confirm_label {
+    &::before{
+      background: url('./../../assets/pictures/check.svg') center no-repeat;
+    }
+  }
+  .confirm_label {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 5px 60px;
+    display: flex;
+    align-items: center;
+    color: $secondary-text-color;
+    display: inline-block;
+    position: relative;
+  
+    &::before {
+      @include pseudo(40px, 40px);
+      border: 2px solid $main-black;
+      top: 0;
+      left: 0;
+    }
+  }
+  
+  .button_submit {
+    composes: baseButton from '../../index.scss';
+    color: $border-color;
+   
+    &:disabled {
+        background-color: $disabled-color;
+        &:hover{
+            color: $border-color;
+            border-color: transparent;
+            cursor: auto;
+        }
+    }
+  }

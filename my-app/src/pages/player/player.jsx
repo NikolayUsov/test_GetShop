@@ -1,8 +1,9 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
-import KeyBoard from '../../components/key-board/key-board';
+
 import styles from './player.module.scss';
 import Modal from '../../components/modal/modal';
+import OrderForm from '../../components/order-form/order-form';
 
 export default function Player() {
   return (
@@ -27,36 +28,10 @@ export default function Player() {
 
       </div>
 
-      <Modal isOpen={false}>
+      <Modal isOpen>
         <section className={styles.formModal}>
 
-          <form action="#" method="post" className={styles.formModal_form}>
-            <h2 className={styles.formModal__header}>Введите ваш номер мобильного телефона</h2>
-            <div className={styles.formModal__input_wrapper}>
-              <label htmlFor="phone" className="visually-hidden">
-                Phone number
-              </label>
-              <input
-                id="phone"
-                type="tel"
-                placeholder="+7(___)___-__-__"
-                className={styles.formModal__phone_input}
-              />
-            </div>
-            <p className={styles.formModal__description}>
-              и с Вами свяжется наш менеждер для дальнейшей консультации
-            </p>
-            <div className={styles.formModal__keyboard_wrapper}>
-              <KeyBoard />
-            </div>
-            <div className={styles.formModal__confirm_wrapper}>
-              <input type="checkbox" id="confirm" className={styles.formModal__confirm_checkbox} />
-              <label htmlFor="confirm" className={styles.formModal__confirm_label}>Согласие на обработку персональных данных</label>
-            </div>
-
-            <button type="submit" className={styles.formModal__button_submit} disabled>Подтвердить номер</button>
-
-          </form>
+          <OrderForm />
           <button type="button" className={styles.formModal_close}>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M2.34473 1.94067L22.6263 22.2223" stroke="currentColor" strokeWidth="3" />
