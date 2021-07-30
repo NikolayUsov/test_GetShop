@@ -1,11 +1,12 @@
+/* eslint-disable jsx-a11y/iframe-has-title */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 
+import { useDispatch } from 'react-redux';
 import styles from './player.module.scss';
 import Modal from '../../components/modal/modal';
 import OrderForm from '../../components/order-form/order-form';
 import { ModalsName, ModalStatus } from '../../utils/const';
-import { useDispatch } from 'react-redux';
 import { setModalStatus } from '../../store/slices/modals';
 
 export default function Player() {
@@ -14,18 +15,26 @@ export default function Player() {
   const handleModalStartClose = () => {
     dispatch(setModalStatus({
       [ModalsName.START]: ModalStatus.CLOSE,
-      [ModalsName.FORM]: ModalStatus.OPEN
-    }))
-  }
+      [ModalsName.FORM]: ModalStatus.OPEN,
+    }));
+  };
 
   const handleModalFormClose = () => {
     dispatch(setModalStatus({
-      [ModalsName.FORM]: ModalStatus.CLOSE
-    }))
-  }
+      [ModalsName.FORM]: ModalStatus.CLOSE,
+    }));
+  };
   return (
     <div className={styles.container}>
-      <div className={styles.content} >
+      <div className={styles.content}>
+        <iframe
+          src="https://www.youtube.com/embed/BQmQ4SWbgAE"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+        ;
       </div>
       <Modal name={ModalsName.START}>
         <div className={styles.modal}>
@@ -47,13 +56,13 @@ export default function Player() {
               type="button"
               className={styles.modal__button}
             >
-                ОК
+              ОК
             </button>
           </div>
 
         </div>
       </Modal>
-      
+
       <Modal name={ModalsName.FORM}>
         <section className={styles.formModal}>
 
