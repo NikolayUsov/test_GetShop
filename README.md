@@ -11,7 +11,7 @@
 ## Как пользоваться
 
 ### Опубликованная версия
-↗️ Vercel - (https://get-shop-16lkvbf6h-nikolayusov.vercel.app/).
+[↗️ Vercerl]https://get-shop-16lkvbf6h-nikolayusov.vercel.app/).
 
 
 ### Установка зависимостей
