@@ -1,4 +1,3 @@
-/* eslint-disable no-param-reassign */
 import { createSlice } from '@reduxjs/toolkit';
 import { ModalsName, ModalStatus } from '../../utils/const';
 import { NameSpace } from '../reducer/name-space';

@@ -4,6 +4,7 @@ exports[`Test Button number Should create snapshot correctly 1`] = `
 <DocumentFragment>
   <button
     class="button"
+    data-testid="phone-number-5"
     type="button"
   >
     5

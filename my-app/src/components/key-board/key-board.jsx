@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
+import PropTypes from 'prop-types';
 import cn from 'classnames';
 import ButtonNumber from '../button-number/button-number';
 import styles from './key-board.module.scss';
@@ -29,4 +29,7 @@ function KeyBoard({ handleButtonNumberClick }) {
   );
 }
 
+KeyBoard.propTypes = {
+  handleButtonNumberClick: PropTypes.func.isRequired,
+};
 export default KeyBoard;

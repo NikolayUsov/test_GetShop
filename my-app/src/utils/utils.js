@@ -1,5 +1,3 @@
-/* eslint-disable import/prefer-default-export */
-
 export const createInputMask = (pattern) => (str) => {
   let number = '';
   let currIndex = 0;

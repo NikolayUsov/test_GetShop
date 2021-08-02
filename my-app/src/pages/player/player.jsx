@@ -1,13 +1,11 @@
-/* eslint-disable jsx-a11y/iframe-has-title */
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
-
 import { useDispatch } from 'react-redux';
 import styles from './player.module.scss';
 import Modal from '../../components/modal/modal';
 import OrderForm from '../../components/order-form/order-form';
 import { ModalsName, ModalStatus } from '../../utils/const';
 import { setModalStatus } from '../../store/slices/modals';
+import FullScreenVideo from '../../components/full-screen-video/full-screen-video';
 
 export default function Player() {
   const dispatch = useDispatch();
@@ -26,16 +24,7 @@ export default function Player() {
   };
   return (
     <div className={styles.container}>
-      <div className={styles.content}>
-        <iframe
-          src="https://www.youtube.com/embed/BQmQ4SWbgAE"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
-        ;
-      </div>
+      <FullScreenVideo embed="dbvi_S3fy2M" />
       <Modal name={ModalsName.START}>
         <div className={styles.modal}>
           <h2 className={styles.modal__text}>

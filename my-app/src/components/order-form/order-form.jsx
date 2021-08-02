@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
 import cn from 'classnames';
 import styles from './order-form.module.scss';
@@ -69,7 +68,13 @@ function OrderForm() {
   };
 
   return (
-    <form onSubmit={handleFormSubmit} action="#" method="post" className={styles.form}>
+    <form
+      onSubmit={handleFormSubmit}
+      action="#"
+      method="post"
+      className={styles.form}
+      data-testid="order-form"
+    >
       {formStatus === FormStatus.SUCCESS_SUBMIT
         ? (
           <div>
@@ -89,6 +94,7 @@ function OrderForm() {
                 Phone number
               </label>
               <input
+                data-testid="phone-input"
                 id="phone"
                 type="tel"
                 value={input.value}
@@ -116,6 +122,7 @@ function OrderForm() {
                       checked={checkBoxState}
                       type="checkbox"
                       id="confirm"
+                      data-testid="confirm"
                       className={styles.confirm_checkbox}
                     />
                     <label htmlFor="confirm" className={styles.confirm_label}>Согласие на обработку персональных данных</label>
@@ -125,6 +132,7 @@ function OrderForm() {
             </div>
             <button
               type="submit"
+              data-testid="submit-button"
               className={styles.button_submit}
               disabled={submitDisable}
             >

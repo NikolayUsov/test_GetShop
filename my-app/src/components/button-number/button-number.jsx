@@ -1,5 +1,4 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import PropTypes from 'prop-types';
 import styles from './button-number.module.scss';
 
@@ -8,6 +7,7 @@ function ButtonNumber({ value, handleButtonNumberClick }) {
     <button
       onClick={() => handleButtonNumberClick(value)}
       type="button"
+      data-testid={`phone-number-${value}`}
       className={styles.button}
     >
       {value === 'BackSpace' ? 'Стереть' : value}
@@ -15,7 +15,9 @@ function ButtonNumber({ value, handleButtonNumberClick }) {
   );
 }
 ButtonNumber.propTypes = {
-  value: PropTypes.string.isRequired,
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number]).isRequired,
   handleButtonNumberClick: PropTypes.func.isRequired,
 };
 

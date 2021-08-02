@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
@@ -13,7 +12,7 @@ const showFirstModal = () => {
     [ModalsName.START]: ModalStatus.OPEN,
   }));
 };
-setTimeout(showFirstModal, 2000);
+setTimeout(showFirstModal, 5000);
 
 ReactDOM.render(
   <React.StrictMode>
