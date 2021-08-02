@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback  } from 'react';
 import cn from 'classnames';
 import styles from './order-form.module.scss';
 import KeyBoard from '../key-board/key-board';
 import { KeysType } from '../../utils/const';
 import { createInputMask } from '../../utils/utils';
 import { checkNumber } from '../../api/api';
+
 
 const pattern = '+7(___)___-__-__';
 const getPhoneNumber = createInputMask(pattern);
@@ -43,10 +44,11 @@ function OrderForm() {
       });
   };
 
-  const handleButtonNumberClick = (number) => {
+  const handleButtonNumberClick = useCallback((number) => {
     if (formStatus !== FormStatus.NORMAL) {
       setFormStatus(FormStatus.NORMAL);
     }
+    
     if (number === KeysType.BACKSPACE) {
       setValue((prev) => ({
         ...prev,
@@ -61,7 +63,7 @@ function OrderForm() {
       inputNumbers: (prev.inputNumbers + number).slice(0, 10),
       value: getPhoneNumber(prev.inputNumbers + number),
     }));
-  };
+  }, [])
 
   const handleConfirmChange = () => {
     setCheckBox(!checkBoxState);

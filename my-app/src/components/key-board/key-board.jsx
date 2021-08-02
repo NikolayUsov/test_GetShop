@@ -32,4 +32,4 @@ function KeyBoard({ handleButtonNumberClick }) {
 KeyBoard.propTypes = {
   handleButtonNumberClick: PropTypes.func.isRequired,
 };
-export default KeyBoard;
+  export default React.memo(KeyBoard);

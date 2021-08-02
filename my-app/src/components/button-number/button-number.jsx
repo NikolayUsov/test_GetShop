@@ -21,4 +21,4 @@ ButtonNumber.propTypes = {
   handleButtonNumberClick: PropTypes.func.isRequired,
 };
 
-export default ButtonNumber;
+  export default React.memo(ButtonNumber);;
